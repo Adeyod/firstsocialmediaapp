@@ -147,14 +147,18 @@ footer button {
 }
 
 
-@media screen and (max-width: 390px) {
+@media (max-width: 420px) {
   header {
-    max-width: 100%;
+    /* max-width: 100%; */
     overflow: hidden;
   }
   .main_div {
-    font-size: 10px;
+    font-size: 8px;
+    padding: 0%;
   }
+   .footer_btn {
+    padding: 0%;
+  } 
 }
 
 
