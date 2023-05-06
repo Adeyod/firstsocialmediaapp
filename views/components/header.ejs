@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="../public/main.css">
+
+<!-- <header>
+  <div>
+    <a href="/users/register">
+      <button class="footer_btn">Register</button>
+    </a>
+  
+    <a href="/users/login">
+      <button class="footer_btn">Login</button>
+    </a>
+  </div>
+</header> -->
+
+<header class="bg-danger form-control p-4">
+  <div class="main_div form-group">
+    <a href="/" class="footer_btn p-2 mb-5">Home</a>
+    <a href="/about"class="footer_btn p-2 mb-5">About</a>
+
+    <% if (login) { %>
+    <a href="/users/friends" class="footer_btn p-2 mb-5">Friends</a>
+    <a href="/users/profile" class="footer_btn p-2 mb-5">Profile</a>
+    <a href="/create-post" class="footer_btn p-2 mb-5">Create Post</a>
+    <a href="/users/logout" class="footer_btn p-2">Logout</a>
+    <% } else { %>
+    <a href="/users/register" class="footer_btn p-2">Register</a>
+    <a href="/users/login" class="footer_btn p-2 mb-5">Login</a>
+   <% } %>
+   
+  
+  </div>
+</header>
+<!-- <header class="gen_header">
+  <div class="main_div">
+    <a href="/" class="footer_btn">Home</a>
+    <a href="/about"class="footer_btn">About</a>
+
+    <% if (login) { %>
+    <a href="/users/profile" class="footer_btn">Profile</a>
+    <a href="/create-post" class="footer_btn">Create Post</a>
+    <a href="/users/logout" class="footer_btn">Logout</a>
+    <% } else { %>
+    <a href="/users/register" class="footer_btn">Register</a>
+    <a href="/users/login" class="footer_btn">Login</a>
+   <% } %>
+   
+  
+  </div>
+</header> -->

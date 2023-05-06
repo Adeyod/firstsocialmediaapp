@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include ('./components/head.ejs') %>
+</head>
+
+<body>
+  <header>
+    <%- include ('./components/header.ejs')%> 
+  </header>
+  <main style="height: 100%">
+    <h2 class="friends">Mutual Friends</h2>
+    
+    <% users.forEach(user => { %>
+      <div>
+        <ul>
+         <li style="font-weight: bold;">
+          <%= user.name %> 
+         </li>
+        </ul>
+      </div>
+      <% }) %>
+    </div>
+    </div>
+  </main>
+  <footer>
+    <%- include ('./components/footer.ejs')%> 
+  </footer>
+</body>
+
+</html>

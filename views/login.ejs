@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include ('./components/head.ejs') %>
+</head>
+<body>
+  <header>
+    <%- include ('./components/header.ejs')%>
+  </header>
+  
+    <div class="container_div">
+      <h1 class="login_text"><i class=""></i>  Login</h1>
+      <%- include ("./partials/messages") %>
+      <form class="form-control" action="/users/login" method="POST">
+        <div class="child1">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class=""
+            placeholder="Enter Email"
+          />
+        </div>
+        <div class="child1">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class=""
+            placeholder="Enter Password"
+          />
+        </div>
+        <button type="submit" class="login_btn">Login</button>
+      </form>
+      <p class="reg_link">
+        No Account? <a href="/users/register">Register Here</a>
+      </p>
+    </div>
+
+
+    <footer>
+      <%- include ('./components/footer.ejs')%>
+    </footer>
+</body>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include ('./components/head.ejs') %>
+</head>
+
+<header>
+<%- include('./components/header.ejs') %>
+</header>
+<div>
+<h2 class="mb-3 mt-5 text-decoration-underline">Create Your Post Here</h2>
+<div class="form-group mb-3">
+<label for="title">Title</label><br>
+<input class="form-control" type="text" placeholder="Title Here">
+</div>
+
+<div class="form-group mb-3">
+  <label for="description"> Description</label><br>
+  <textarea class="form-control" name="blogPost" id="blogPost" cols="30" rows="2"></textarea>
+  </div>
+
+<div class="form-group mb-3">
+<label for="blogPost">Blog Post</label><br>
+<textarea class="form-control" name="blogPost" id="blogPost" cols="30" rows="10"></textarea>
+</div>
+
+<a class="btn btn-secondary" href="/dashboard">Cancel</a>
+<button class="btn btn-primary" type="submit">Save</button>
+</div>

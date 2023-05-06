@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include ('./components/head.ejs') %>
+</head>
+
+<body>
+  <header>
+     <%- include ('./components/header.ejs')%> 
+  </header>
+  <main style="height: 100%">
+    <h1 class="">Dashboard</h1>
+    <div class="" style="display:flex; justify-content: space-between;">
+    <div>
+    <p class="">Welcome</p>
+    </div>
+    <div>
+    <h2 class="friends">Mutual Friends</h2>
+    <div class=""></div>
+
+    <% users.forEach(user => { %>
+      <div>
+        
+        <ul>
+         <li style="font-weight: bold;">
+          <%= user.name %>
+         </li>
+      </div>
+      <% }) %>
+    </div>
+    </div>
+  </main>
+  <footer>
+    <%- include ('./components/footer.ejs')%>
+  </footer>
+</body>
+
+</html>

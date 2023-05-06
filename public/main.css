@@ -1,0 +1,160 @@
+body {
+  margin: 100px 0;
+  height: max-content;
+}
+.container_div {
+  padding: 10px;
+  font-size: large;
+  border-radius: 30px;
+  margin: 0 auto;
+  max-width: 600px;
+  width: 90%;
+  background-color: rgb(204, 220, 220);
+}
+
+a {
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.home-btn {
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+.login_text {
+  text-align: center;
+  font-size: 40px;
+}
+.login_form {
+  width: 80%;
+  margin-left: 20%;
+}
+.reg_form {
+  width: 80%;
+  margin-left: 18%;
+}
+.my_input {
+  width: 70%;
+  margin: 10px;
+  height: 35px;
+  border-radius: 15px;
+  padding-left: 10px;
+}
+.my_input::placeholder {
+  padding-left: 10px;
+}
+.child1 {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.login_btn {
+  width: 60%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: tomato;
+}
+.reg_btn {
+  width: 70%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: tomato;
+}
+
+header {
+  margin-bottom: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+footer {
+  margin-top: 20px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 70px;
+}
+
+header button,
+footer button {
+  padding: 10px;
+  border-radius: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+.reg_link {
+  text-align: center;
+  font-size: 20px;
+}
+.copy_msg {
+  text-align: right;
+  font-weight: bold;
+  color: aliceblue;
+}
+
+.error {
+  text-align: center;
+  color: red;
+}
+.success {
+  color: green;
+  text-align: center;
+}
+
+.li {
+  font-weight: bold;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_div {
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.footer_btn {
+  color: black;
+  background: white;
+}
+
+.friends {
+  text-decoration: underline;
+}
+
+
+@media screen and (max-width: 390px) {
+  header {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .main_div {
+    font-size: 10px;
+  }
+}
+
+

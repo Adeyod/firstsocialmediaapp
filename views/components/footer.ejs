@@ -1,0 +1,21 @@
+<footer class="bg-danger form-control p-4">
+  <div class="main_div form-group">
+    <a href="/" class="footer_btn p-2">Home</a>
+    <a href="/about"class="footer_btn p-2">About</a>
+
+    <% if (login) { %>
+    <a href="/users/friends" class="footer_btn p-2">Friends</a>
+    <a href="/users/profile" class="footer_btn p-2">Profile</a>
+    <a href="/create-post" class="footer_btn p-2">Create Post</a>
+    <a href="/users/logout" class="footer_btn p-2">Logout</a>
+    <% } else { %>
+    <a href="/users/register" class="footer_btn p-2">Register</a>
+    <a href="/users/login" class="footer_btn p-2">Login</a>
+   <% } %>
+   
+  
+  </div>
+  <p class="copy_msg mb-4 mt-2">
+  Copyright &copy; Ayodeji Adebolu
+</p>
+</footer>
