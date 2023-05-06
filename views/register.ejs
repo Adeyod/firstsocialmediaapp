@@ -8,7 +8,62 @@
         <%- include ('./components/header.ejs')%>
       </header>
     
-    
+    <div class="container_div">
+      <h1 class="login_text">
+        <i class=""></i> Register
+      </h1>
+      <%- include ("./partials/messages"); %>
+      <form class="reg_form" action="/users/register" method="POST">
+        <div class="child1">
+          <label for="name">Name</label>
+          <input
+            type="name"
+            id="name"
+            name="name"
+            class="my_input"
+            placeholder="Enter Name"
+            value="<%= typeof name != 'undefined' ? name : '' %>"
+          />
+        </div>
+        <div class="child1">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="my_input"
+            placeholder="Enter Email"
+            value="<%= typeof email != 'undefined' ? email : '' %>"
+          />
+        </div>
+        <div class="child1">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="my_input"
+            placeholder="Create Password"
+            value="<%= typeof password != 'undefined' ? password : '' %>"
+          />
+        </div>
+        <div class="child1">
+          <label for="password2">Confirm Password</label>
+          <input
+            type="password"
+            id="password2"
+            name="password2"
+            class="my_input"
+            placeholder="Confirm Password"
+            value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+          />
+        </div>
+        <button type="submit" class="reg_btn">
+          Register
+        </button>
+      </form>
+      <p class="reg_link">Have An Account? <a href="/users/login">Login</a></p>
+    </div>
     <footer>
       <%- include ('./components/footer.ejs')%>
     </footer>
