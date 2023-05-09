@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const flash = require('connect-flash');
 const session = require('express-session');
+const helmet = require('helmet')
 
 
 const indexRouter = require('./routes/index.js');
@@ -11,6 +12,8 @@ const usersRouter = require('./routes/users.js');
 const postRouter = require('./routes/post.js');
 
 const app = express();
+
+app.use(helmet())
 require("dotenv").config()
 const MONGODB_URI = process.env.MONGODB_URI
 

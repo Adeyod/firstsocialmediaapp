@@ -20,7 +20,7 @@ router.get('/dashboard', ensureAuthenticated, async(req, res) => {
 });
 
 router.get ('/users/friends', ensureAuthenticated, async (req, res) => {
-  let users = await User.find()
+  let users = await User.find().sort({})
   console.log(users)
   res.render('friends', { users })
 })
