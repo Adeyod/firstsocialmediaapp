@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./components/head.ejs') %>
+</head>
+<body>
+  <header>
+    <%- include('./components/header.ejs') %>
+  </header>
+  <h2 class="container"><u>Welcome</u></h2>
+  <div class="container form-control">
+    <%- include ("./partials/messages"); %>
+    <div class="otp_container">
+      <input type="tel" name="otp" id="otp" placeholder="Enter OTP Here" maxlength="6" class="mb-3 mt-3"><br>
+    <a href="" class="btn btn-primary mb-3">Confirm OTP</a>
+    </div>
+
+    <div class="reg_container">
+      <p class="reg_link br-2">No Account? <a href="/users/register">Register Here</a></p>
+      <p class="reg_link">Have An Account? <a href="/users/login">Login</a></p>
+    </div>
+
+  </div>
+  <footer>
+    <%- include('./components/footer.ejs') %>
+  </footer>
+</body>
+</html>

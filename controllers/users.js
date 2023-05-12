@@ -1,10 +1,8 @@
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 const User = require('../models/User.js');
-// console.log(User)
 const usersRegister_post = (req, res) => {
   const { name, email, password, password2 } = req.body;
-  console.log(req.body)
   let errors = [];
 
   if (!name || !email || !password || !password2) {
@@ -77,6 +75,48 @@ const usersLogin_post = async (req, res, next) => {
   })(req, res, next);
 }
 
+const forgetPassword_get = (req, res) => {
+res.render('forget_password')
+}
+const forgetPassword_post = (req, res) => {
+const {email} = req.body;
+let errors = []
+if (!email) {
+  // errors.push({ msg: "Fill in your email address" })
+// }
+// if (errors.length > 0) {
+  req.flash(
+    'error_msg',
+    'Email is Required'
+  );
+  res.render('forget_password')
+}
+ else {
+
+User.findOne({email: email }).then(user => {
+    if(user) {
+      req.flash(
+        'success_msg',
+        'An OTP Has been sent to your email address. Please enter it below'
+      );
+      res.redirect('otp')
+    } else {
+      req.flash(
+        'error_msg',
+        'This email does not exist. Please register an account first'
+      );
+      res.redirect('register')
+    }
+})
+}
+}
+const otp_get = (req, res) => {
+res.render('otp')
+}
+const otp_post = (req, res) => {
+res.render('otp')
+}
+
 const usersLogout = (req, res) => {
   req.logout(function(err) {
     if(err) {return next(err)}
@@ -99,4 +139,7 @@ module.exports = {
   usersRegister_get, 
   usersLogin_get, 
   usersLogin_post, 
+  forgetPassword_get,
+  forgetPassword_post,
+  otp_post,otp_get,
   usersLogout }

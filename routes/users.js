@@ -8,7 +8,10 @@ const {
   usersRegister_get, 
   usersLogin_get, 
   usersLogin_post, 
-  usersLogout } = require('../controllers/users.js');
+  usersLogout, 
+  forgetPassword_get,
+  forgetPassword_post, 
+  otp_post, otp_get} = require('../controllers/users.js');
 
   const registerLimiter = rateLimit({
     windowMs: 3 * 60 * 1000, // 3 minutes
@@ -37,6 +40,11 @@ router.post('/register', registerLimiter, usersRegister_post)
 
 // Login
 router.post('/login', loginLimiter, usersLogin_post, );
+
+router.get('/forget_password', forgetPassword_get);
+router.post('/forget_password', forgetPassword_post);
+router.get('/otp', otp_get);
+router.post('/otp', otp_post);
 
 // Logout
 router.get('/logout', usersLogout);
