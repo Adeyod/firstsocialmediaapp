@@ -251,3 +251,21 @@ footer button {
 
 }
 
+@media screen and (max-width: 450px) {
+  .reg_link {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reg_form {
+    width: 100%;
+    align-items: center;
+    margin: 0;
+  }
+
+  .my_input {
+    width: 100%;
+    margin: 0;
+  }
+}
+
