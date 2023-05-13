@@ -34,7 +34,7 @@ mongoose
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 app.use("/public", express.static(__dirname + "/public"))
-// app.use(express.static("public"))
+
 
 // Express body parser
 app.use(express.urlencoded({ extended: true }));

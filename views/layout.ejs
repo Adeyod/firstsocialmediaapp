@@ -4,8 +4,12 @@
     <%- include('./components/head.ejs') %>
   </head>
   <body>
-    <div class="container"><%- body %>    
-    </div>
-    <!-- <script src="/public/js/script.js" type='text/javascript'></script> -->
+    <header>
+      <%- include('./components/header.ejs') %>
+    </header>
+    <div class="container"><%- body %></div>
+    <footer>
+      <%- include('./components/footer.ejs') %>
+    </footer>
   </body>
 </html>
