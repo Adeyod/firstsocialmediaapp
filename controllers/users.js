@@ -64,8 +64,8 @@ const usersRegister_post = (req, res) => {
   }
 }
 
-const usersRegister_get = (req, res) => res.render('register')
-const usersLogin_get = (req, res) => res.render('login')
+const usersRegister_get = (req, res) => res.render('register', { title: 'New User Registration' })
+const usersLogin_get = (req, res) => res.render('login', { title: 'User Login Page' })
 const usersLogin_post = async (req, res, next) => {
   passport.authenticate('local',  {
     
@@ -76,7 +76,7 @@ const usersLogin_post = async (req, res, next) => {
 }
 
 const forgetPassword_get = (req, res) => {
-res.render('forget_password')
+res.render('forget_password', { title: 'Forget Password' })
 }
 const forgetPassword_post = (req, res) => {
 const {email} = req.body;
@@ -111,7 +111,7 @@ User.findOne({email: email }).then(user => {
 }
 }
 const otp_get = (req, res) => {
-res.render('otp')
+res.render('otp', { title: "One Time Password" })
 }
 const otp_post = (req, res) => {
 res.render('otp')
