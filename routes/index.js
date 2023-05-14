@@ -16,7 +16,14 @@ router.get('/dashboard', ensureAuthenticated, async(req, res) => {
 });
 
 router.get ('/users/friends', ensureAuthenticated, async (req, res) => {
-  let users = await User.find().sort({})
+  let users = await User.find()
+  // let users = await User.find({ email: { $ne: req.body.email } })
+  // let users = await User.find({ user: { $ne: req.user.name } })
+
+  
+ 
+  // db.collection.find({"email": "user.email"})
+  // let users = await User.find({"name": "name"})
   res.render('friends', { title: "Mutual Friends", users })
 })
 
